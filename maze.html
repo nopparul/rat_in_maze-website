@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Image Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="maze.css">
+    <style>
+        body {
+            margin: 0;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #221e1e;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <select id="mazeSelect">
+        <option value="maze1">Maze 1</option>
+        <option value="maze2">Maze 2</option>
+        <option value="maze3">Maze 3</option>
+        <option value="maze4">Maze 4</option>
+    </select>
+    <div class="allcontain">
+            <div class="container" id="buttonContainer">
+                <div class="buttons">
+                    <button onclick="showImage('image1')" id="button1">maze 1</button>
+                    <button onclick="showImage('image2')" id="button2">maze 2</button>
+                    <button onclick="showImage('image3')" id="button3">maze 3</button>
+                    <button onclick="showImage('image4')" id="button4">maze 4</button>
+                    <button class ="back-button" onclick="back()">BACK</button>
+                   
+                </div>
+                
+            </div>
+            
+            <div class="image-display" id="imageDisplay">
+                <img id="image1" src="maze1.png" alt="Image 1">
+                <img id="image2" src="maze2.png" alt="Image 2">
+                <img id="image3" src="maze3.png" alt="Image 3">
+                <img id="image4" src="maze4.png" alt="Image 4">
+        </div>
+    </div>
+    <button class="sbutton" onclick="selectMaze()">Select</button>
+    <script>
+        function showImage(imageId) {
+            const selectedImage = document.getElementById(imageId);
+            const buttonContainer = document.getElementById('buttonContainer');
+            const imageDisplay = document.getElementById('imageDisplay');
+            const images = document.querySelectorAll('.image-display img');
+            if (selectedImage) {
+                if (selectedImage.style.display === 'none') {
+                    buttonContainer.classList.add('left');
+                    imageDisplay.classList.add('visible');
+                    images.forEach(image => image.style.display = 'none');
+                    selectedImage.style.display = 'block';  
+                } else {
+                    buttonContainer.classList.remove('left');
+                    imageDisplay.classList.remove('visible');
+                    images.forEach(image => image.style.display = 'none');  
+                }
+            }
+        }
+        function back() {
+            window.location.href = 'index.html';
+        }
+        function selectMaze() {
+            const selectedMaze = document.getElementById('mazeSelect').value;
+    
+
+            window.location.href = `rat_maze.html?maze=${selectedMaze}`;
+        }
+    </script>
+</body>
+</html>

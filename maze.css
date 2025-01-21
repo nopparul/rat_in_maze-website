@@ -1,0 +1,53 @@
+
+.allcontain{
+    margin: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.container {
+    margin-bottom: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.container.left {
+    position: absolute;
+    left: 0;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-display {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.image-display.visible {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 70%;
+}
+
+img {
+    display: none;
+}
+.back-button{
+    margin-top: 50px;
+}
+select {
+    margin-top: 70px;
+}
+.sbutton{
+    margin-bottom: 70px;
+}

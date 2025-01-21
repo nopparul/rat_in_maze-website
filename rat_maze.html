@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Grid</title>
+    <link rel="stylesheet" href="rat_maze.css">
+</head>
+<body>
+    <div class="container" id="controls">
+        <div class="upper">
+            <button onclick="home()">HOME</button>
+        </div>
+        <div class="middle">
+            <div class="left">
+                <div class="left_top">
+                    <button onclick="moveRatHandler('up')">Up</button>
+                </div>
+                <div class="left_mid">
+                    <button onclick="moveRatHandler('left')">Left</button>
+                    <button onclick="findFoodhandler()">Auto</button>
+                    <button onclick="moveRatHandler('right')">Right</button>
+                </div>
+                <div class="left_low">
+                    <button onclick="moveRatHandler('down')">Down</button>
+                </div>
+            </div>
+            <div class="right">
+                <div id="grid">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+        </div>
+        <div class="lowwer">
+            <button onclick="back()">BACK</button>
+        </div>
+    </div>
+
+    <script src="grid_movemen.js"></script>
+</body>
+</html>

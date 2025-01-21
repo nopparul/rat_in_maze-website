@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rat In Maze</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="howtoplay.css">
+</head>
+<body>
+    <div class="container">
+        <div class="rectangle">
+            <h1>How to Play</h1>
+            <ul>
+                <li>FIND THE CHEESE!</li>
+                <li>UP = move rat up 1 row(from current position)</li>
+                <li>DOWN = move rat down 1 row(from current position)</li>
+                <li>LEFT = move rat left 1 column(from current position)</li>
+                <li>RIGHT = move rat right 1 column(from current position)</li>
+                <li>AUTO = use auto mode to find all food in maze</li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button onclick="back()">BACK</button>
+        </div>
+    </div>
+    <script>
+        function back() {
+            window.location.href = 'index.html';
+        }
+
+    </script>
+</body>
+</html>
